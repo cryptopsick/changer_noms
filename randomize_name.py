@@ -10,8 +10,6 @@ def get_random_name():
     selected_name = list_of_names.sample(n=1)
     return selected_name.iat[0,0].title()
 
-print(get_random_name())
-
 #Trouver les indexes de tout occurences
 def get_index_positions(list_of_elems, element):
     ''' retourne les indexes des occurences '''
