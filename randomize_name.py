@@ -1,8 +1,10 @@
 import pandas as pd
 
+#Ici on prend des noms qui représentent nos clients.
 names = ['Michel Tremblay', 'Francis Ménard', 'Michelle Tremblay', 'Alex Legault']
 new_list = names
 
+#On génére un nom aléatoire de la liste.csv
 def get_random_name():   
     list_of_names = pd.read_csv('List.csv')
     selected_name = list_of_names.sample(n=1)
@@ -10,7 +12,7 @@ def get_random_name():
 
 print(get_random_name())
 
-
+#Trouver les indexes de tout occurences
 def get_index_positions(list_of_elems, element):
     ''' retourne les indexes des occurences '''
     index_pos_list = []
@@ -26,6 +28,7 @@ def get_index_positions(list_of_elems, element):
             break
     return index_pos_list
 
+#remplacer chaque nom de la liste par un nom aléatoire 
 for name in names:
     indices = get_index_positions(names,name)
     value = get_random_name()
